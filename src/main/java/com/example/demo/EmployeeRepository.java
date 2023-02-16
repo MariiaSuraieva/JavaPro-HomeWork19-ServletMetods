@@ -144,4 +144,14 @@ public class EmployeeRepository {
         }
         return listEmployees;
     }
+
+//Добавлен метод создания списка, чья страна Украина
+    public static List<Employee> getUkrainiansList (List<Employee> listOfAll){
+        List<Employee> listUkrainians = new ArrayList<>();
+        for(Employee em:listOfAll){
+            if(em.getCountry().equals("Ukraine"))
+                listUkrainians.add(em);
+        }
+        return listUkrainians;
+    }
 }
